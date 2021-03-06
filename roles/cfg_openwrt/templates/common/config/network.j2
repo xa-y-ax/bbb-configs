@@ -23,7 +23,9 @@ config interface 'loopback'
 
 {% for network in networks %}
   {% set name = network['name'] if 'name' in network else network['role'] %}
-  {% if (role == 'corerouter' and network['role'] == 'mesh') or ('assignments' in network and inventory_hostname in network['assignments']) or name in wifi_networks %}
+  {% if (role == 'corerouter' and network['role'] == 'mesh') or ('assignments' in network and inventory_hostname in network['assignments'])
+     or name in wifi_networks
+     or network.get('mesh_ap') == inventory_hostname %}
 config interface '{{ name }}'
 	option proto 'static'
 	option ifname '{{ 'switch0' if dsa_ports is defined else int_port }}.{{ network['vid'] }}'
@@ -41,7 +43,7 @@ config interface '{{ name }}'
     {% elif role == 'corerouter' and network['role'] == 'mesh' %}
 	option ipaddr '{{ network['prefix'] }}'
     {% endif %}
-    {% if name in wifi_networks %}
+    {% if name in wifi_networks or network.get('mesh_ap') == inventory_hostname %}
         option type 'bridge'
     {% endif %}
   {% endif %}
