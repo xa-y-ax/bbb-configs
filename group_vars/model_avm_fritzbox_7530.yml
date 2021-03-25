@@ -1,6 +1,10 @@
 ---
-imagebuilder: "https://downloads.openwrt.org/releases/19.07.7/targets/ipq40xx/generic/openwrt-imagebuilder-19.07.7-ipq40xx-generic.Linux-x86_64.tar.xz"
-feed_version: "openwrt-19.07"
+imagebuilder: "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/openwrt-imagebuilder-ipq40xx-generic.Linux-x86_64.tar.xz"
+feed_version: "master"
+
+imagebuilder_disable_signature_check: true
+instr_set: "arm_cortex-a7_neon-vfpv4"
+
 
 switch_ports: 6
 switch_int_port: 0
