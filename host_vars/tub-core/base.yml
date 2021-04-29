@@ -1,0 +1,6 @@
+---
+
+location: tub
+role: corerouter
+target: "ipq40xx/generic"
+model: "avm_fritzbox-4040"
