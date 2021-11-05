@@ -3,7 +3,7 @@ imagebuilder: "/home/nick/Downloads/openwrt-imagebuilder-ipq40xx-generic.Linux-x
 feed_version: "1.2.0-snapshot"
 imagebuilder_disable_signature_check: true
 target: ipq40xx/generic
-override_target: "avm_fritzbox-7530"
+override_target: "zyxel_nbg6617"
 
 model__packages__to_merge:
   - "-kmod-ath10k-ct -ath10k-firmware-qca4019-ct"
@@ -14,6 +14,7 @@ dsa_ports:
   - lan2
   - lan3
   - lan4
+  - wan
 
 wireless_devices:
   - name: 11a_standard
