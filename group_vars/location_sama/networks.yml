@@ -2,7 +2,7 @@
 ipv6_prefix: "2001:bf7:830:8600::/56"
 
 networks:
-  - vid: 42
+  - vid: 100
     role: mgmt
     prefix: 10.31.81.0/27
     gateway: 1

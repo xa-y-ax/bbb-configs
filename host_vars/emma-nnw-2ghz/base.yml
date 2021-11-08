@@ -1,5 +1,5 @@
 ---
 
 location: emma
-role: ap
+role: core
 model: "ubnt_nanostation-m2_xm"
