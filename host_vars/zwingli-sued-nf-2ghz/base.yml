@@ -1,7 +1,5 @@
 ---
 
-location: zwingli
+location: rhxb
 role: ap
-model: ubnt_nanostation-m2_xm
-
-wireless_profile: zwingli_spezial
+model: model_ubnt_bullet_m_ar7241
