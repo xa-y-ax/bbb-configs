@@ -36,3 +36,5 @@ sysupgrade_preserve_custom_files:
   - /root/
 
 image_search_pattern: "*-sysupgrade.*"
+
+compat_version: 1.0
