@@ -1,0 +1,37 @@
+---
+ipv6_prefix: "2001:bf7:750:4800::/56"
+
+# cbase got following prefixes:
+# DHCP: 10.31.136.0/24 2001:bf7:750:4800::/56
+# Router: 10.31.134.96/27
+# --MGMT: 10.31.134.96/28
+# --MESH: 10.31.134.112/28 {as /32}
+
+networks:
+  - vid: 10
+    role: mesh
+    name: mesh_dtmb
+    prefix: 10.31.130.208/32
+    ipv6_subprefix: -1
+    ptp: true
+
+  - vid: 40
+    role: dhcp
+    inbound_filtering: true
+    enforce_client_isolation: true
+    prefix: 10.31.136.0/24
+    ipv6_subprefix: 0
+    assignments:
+      cbase-core: 1
+
+  - vid: 42
+    role: mgmt
+    prefix: 10.31.134.96/28
+    gateway: 1
+    dns: 1
+    ipv6_subprefix: 1
+    assignments:
+      cbase-core: 1
+      cbase-dtmb: 2
+      cbase-mainip: 14
+      cbase-seminar: 13

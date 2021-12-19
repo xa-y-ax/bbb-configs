@@ -1,0 +1,5 @@
+---
+snmp_devices:
+  - hostname: cbase-dtmb
+    address: 10.31.134.98
+    snmp_profile: airos_6
