@@ -4,11 +4,11 @@ feed_version: "1.2.0-snapshot"
 imagebuilder_disable_signature_check: true
 target: ath79/generic
 
-switch_ports: 6
+switch_ports: 7
 switch_int_port: 0
-switch_ignore_ports: []
+switch_ignore_ports: [1,6]
 
-int_port: eth0
+int_port: eth1
 
 wireless_devices:
   - name: 11a_standard
