@@ -5,3 +5,10 @@ role: corerouter
 model: "avm_fritzbox-7530"
 
 wireless_profile: freifunk_default
+
+host__packages__to_merge:
+  - wg-installer-client
+  - kmod-macvlan
+  - ip-full
+  - coreutils-timeout
+  - falter-berlin-tunnelmanager
